@@ -37,7 +37,10 @@ function App() {
         />
         <button
           className="bg-amber-600 w-18 h-8 rounded-sm cursor-pointer hover:bg-red-700 hover:ring-2 hover:ring-amber-800 text-amber-50"
-          onClick={() => dispatch(incrementNumber(+number))}
+          onClick={() => {
+            dispatch(incrementNumber(+number));
+            setNumber("");
+          }}
         >
           ADD
         </button>
